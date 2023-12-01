@@ -89,6 +89,10 @@ header>.container>a {
     padding-block: 0.5rem;
 }
 
+.header_nav a:hover {
+    border-bottom: #1c1c71 3px solid;
+}
+
 header.dark .header_nav a:hover {
     border-bottom: #fff 3px solid;
 }
