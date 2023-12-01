@@ -84,6 +84,13 @@ header>.container>a {
 .header_nav a {
     text-decoration: none;
     color: inherit;
+    border-bottom: transparent 3px solid;
+    transition: all 300ms ease-out;
+    padding-block: 0.5rem;
+}
+
+header.dark .header_nav a:hover {
+    border-bottom: #fff 3px solid;
 }
 
 .btn_order {
