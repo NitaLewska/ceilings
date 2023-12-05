@@ -1,13 +1,12 @@
 var swiper = new Swiper(".swiper", {
   centeredSlides: true,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
   },
   loop: true,
   breakpoints: {
@@ -23,8 +22,8 @@ var swiper = new Swiper(".swiper", {
     },
     // when window width is >= 640px
     1024: {
-      slidesPerView: 3,
-      spaceBetween: 40
+      slidesPerView: 3.5,
+      spaceBetween: 30
     }
   }
 });

@@ -20,6 +20,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     background-color: #f5f5f5;
+    --swiper-theme-color: #1f1f1f;
 }
 
 .container {
@@ -108,7 +109,7 @@ header.dark .header_nav a:hover {
     border: none;
     cursor: pointer;
     transition: all 300ms ease-out;
-    box-shadow: 12px 10px 27px 6px rgba(0,0,0,0.1);
+    box-shadow: 12px 10px 27px 6px rgba(0, 0, 0, 0.1);
 }
 
 header .btn_order:hover {
@@ -127,9 +128,10 @@ header.dark .btn_order:hover {
 }
 
 @media (max-width: 1400px) {
-    .container{
+    .container {
         max-width: 90vw;
     }
+
     .header_nav,
     .header_btn {
         display: none;
@@ -168,7 +170,7 @@ header.dark .btn_order:hover {
 .promo_btn {
     margin-top: 2rem;
     transition: all 300ms ease-out;
-    box-shadow: 12px 10px 24px 13px rgba(0,0,0,0.2);
+    box-shadow: 12px 10px 24px 13px rgba(0, 0, 0, 0.2);
 }
 
 .promo_btn:hover {
@@ -209,7 +211,7 @@ header.dark .btn_order:hover {
     background-image: url(src/promo/icon_1.jpg);
     background-repeat: no-repeat;
     background-position: right -2rem bottom -1.5rem;
-    box-shadow: 12px 10px 24px 13px rgba(0,0,0,0.2);
+    box-shadow: 12px 10px 24px 13px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1400px) {
@@ -333,19 +335,25 @@ h2 span {
 }
 
 .gallery.container {
-    padding-block: 2rem;
+    padding-block: 3rem;
     background-color: #fff;
     border-radius: 1rem;
 }
 
 .gallery>.swiper {
     height: 500px;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .swiper {
     width: 100%;
     height: 100%;
+}
+
+.gallery h2 {
+    display: block;
+    width: 80%;
+    float: left;
 }
 
 .swiper-slide {
@@ -355,15 +363,112 @@ h2 span {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
+
 
 .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 1rem;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: unset !important;
+    top: -100px !important;
+    margin-top: 0 !important;
+    color: #1f1f1f !important;
+    border-radius: 50%;
+    border: 1px solid #1f1f1f;
+    padding: 0px !important;
+    width: 70px !important;
+    height: 70px !important;
+    transition: all 300ms ease-out;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #1f1f1f;
+    color: #d5d5d5;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+    color: #d5d5d5;
+    transition: all 300ms ease-out;
+}
+
+.swiper-button-prev {
+    padding-right: 5px !important;
+}
+
+.swiper-button-next {
+    padding-left: 5px !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 2rem !important;
+    left: -2px !important;
+}
+
+.gallery_controls {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: flex-end;
+}
+
+.swiper-pagination {
+    position: unset !important;
+    margin: 2rem auto 0;
+    transform: translateX(0) !important;
+}
+
+.credit {
+    margin-top: 6rem;
+    height: 40rem;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+}
+
+.credit_description {
+    width: auto;
+    max-width: calc(1360px/2);
+    display: flex;
+    max-width: calc(1360px/2);
+    margin-right: auto;
+    margin-left: 7rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.credit .btn_order {
+
+}
+.credit .btn_order:hover {
+    background-color: #121249;
+    transform: scale(1.1);
+}
+
+.credit_image {
+    height: 100%;
+    width: 50%;
+    background: url(src/bonus/lakovyj-natjazhnoj-potolok.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 @media (max-width: 1400px) {
     .gallery>.swiper {
@@ -380,6 +485,38 @@ h2 span {
 
 .marquiz__container_inline {
     max-width: unset !important;
+}
+
+.bonus {
+    margin-top: 6rem;
+    height: 40rem;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+}
+
+.bonus_description {
+    width: 50%;
+    max-width: calc(1360px /2);
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.bonus .btn_order:hover {
+    background-color: #121249;
+    transform: scale(1.1);
+}
+
+.bonus_image {
+    height: 100%;
+    width: 50%;
+    background: url(src/bonus/png-transparent-icon-red-bow-red-ribbon-illustration-ribbon-photography-heart_pixian_ai.png), url(src/bonus/lakovyj-natjazhnoj-potolok.jpg);
+    background-position: left top, left 7px top 10px;
+    background-repeat: no-repeat;
+    background-size: contain, cover;
 }
 
 footer.container {
