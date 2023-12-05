@@ -522,10 +522,24 @@ h2 span {
 .bonus_image {
     height: 100%;
     width: 50%;
-    background: url(src/bonus/png-transparent-icon-red-bow-red-ribbon-illustration-ribbon-photography-heart_pixian_ai.png), url(src/bonus/lakovyj-natjazhnoj-potolok.jpg);
-    background-position: left top, left 7px top 10px;
+    background: url(src/bonus/lakovyj-natjazhnoj-potolok.jpg);
+    background-position: left top;
     background-repeat: no-repeat;
-    background-size: contain, cover;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.bonus_image::after {
+    display: block;
+    height: calc(40rem + 10px);
+    width: auto;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    content:' ';
+    background-image: url(src/bonus/png-transparent-icon-red-bow-red-ribbon-illustration-ribbon-photography-heart_pixian_ai.png);
+    background-position: top left;
+    background-size: cover;
 }
 
 
