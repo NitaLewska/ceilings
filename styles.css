@@ -438,6 +438,10 @@ h2 span {
     align-items: center;
 }
 
+.credit.container {
+    padding-inline: 0;
+}
+
 .credit_description {
     width: auto;
     max-width: calc(1360px/2);
@@ -467,6 +471,7 @@ h2 span {
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 1rem;
 }
 
 
@@ -495,6 +500,10 @@ h2 span {
     flex-direction: row;
 }
 
+.bonus.container {
+    padding-inline: 0;
+}
+
 .bonus_description {
     width: 50%;
     max-width: calc(1360px /2);
@@ -518,6 +527,7 @@ h2 span {
     background-repeat: no-repeat;
     background-size: contain, cover;
 }
+
 
 footer.container {
     margin-top: 5rem;
